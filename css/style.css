@@ -1517,3 +1517,37 @@ section { padding: 5.5rem 2rem; }
 .admin-login .pw-wrap input {
   width: 100%;
 }
+/* =============================================
+   MARQUEE TICKER STRIP
+   ============================================= */
+.marquee-strip {
+  background: var(--navy);
+  border-top: 1px solid rgba(212,175,55,0.2);
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+  overflow: hidden;
+  padding: 0.7rem 0;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex; align-items: center;
+  animation: marqueeScroll 28s linear infinite;
+}
+.marquee-strip:hover .marquee-track { animation-play-state: paused; }
+.marquee-item {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  padding: 0 0.6rem;
+  transition: color 0.2s;
+}
+.marquee-item:hover { color: var(--gold); }
+.marquee-dot {
+  color: var(--gold); font-size: 0.35rem;
+  vertical-align: middle; opacity: 0.6;
+  flex-shrink: 0;
+}
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
