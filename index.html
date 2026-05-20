@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inspire Forensics Society at NFSU Delhi Campus. Advancing forensic science through guest lectures, workshops, events, and community.">
+  <title>Inspire Forensics | NFSU Delhi Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a class="navbar__logo" href="#home">
+      <svg class="navbar__logo-svg" viewBox="0 0 42 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 2L3 9V24C3 35 11 44 21 48C31 44 39 35 39 24V9L21 2Z" fill="#0D254C" stroke="#D4AF37" stroke-width="1.5"/>
+        <path d="M21 7L7 13V24C7 32.5 13.5 40 21 43.5C28.5 40 35 32.5 35 24V13L21 7Z" fill="#D32F2F" opacity="0.25"/>
+        <circle cx="21" cy="24" r="7" fill="none" stroke="#D4AF37" stroke-width="1.3"/>
+        <circle cx="21" cy="24" r="2.5" fill="#D4AF37"/>
+        <line x1="21" y1="15" x2="21" y2="20" stroke="#D4AF37" stroke-width="1.2"/>
+        <line x1="21" y1="28" x2="21" y2="33" stroke="#D4AF37" stroke-width="1.2"/>
+        <line x1="12" y1="24" x2="17" y2="24" stroke="#D4AF37" stroke-width="1.2"/>
+        <line x1="25" y1="24" x2="30" y2="24" stroke="#D4AF37" stroke-width="1.2"/>
+        <path d="M6 37 Q21 46 36 37" stroke="#F3C678" stroke-width="0.8" fill="none" opacity="0.5"/>
+      </svg>
+      <span>
+        <span class="navbar__logo-text">Inspire Forensics</span>
+        <span class="navbar__logo-sub">NFSU Delhi</span>
+      </span>
+    </a>
+    <ul class="navbar__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#departments">Activities</a></li>
+      <li><a href="#lectures">Lectures</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button class="navbar__admin-btn" onclick="openAdmin()">Admin</button>
+    </div>
+    <button class="navbar__hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="navbar__drawer">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#departments">Activities</a></li>
+    <li><a href="#lectures">Lectures</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="navbar__drawer-admin" onclick="openAdmin();document.querySelector('.navbar__drawer').classList.remove('open');document.querySelector('.navbar__hamburger').classList.remove('open');document.body.style.overflow=''">Open Admin Panel</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero__bg"></div>
+  <div class="hero__grid"></div>
+  <div class="hero__accent-left"></div>
+  <div class="hero__accent-right"></div>
+  <div class="hero__particles"></div>
+  <div class="hero__content">
+    <div class="hero__eyebrow">National Forensic Sciences University &nbsp;&bull;&nbsp; Delhi Campus &nbsp;&bull;&nbsp; Est. 2024</div>
+    <h1 class="hero__title">INSPIRE<br><span>FORENSICS</span></h1>
+    <div class="hero__subtitle">Society for Forensic Excellence</div>
+    <div class="hero__divider">
+      <div class="hero__divider-line"></div>
+      <span class="hero__divider-gem">&#9670;</span>
+      <div class="hero__divider-line"></div>
+    </div>
+    <p class="hero__desc">Where forensic science meets passion. Bridging academics with real-world investigation through 16+ expert lectures, hands-on labs, and nationwide university collaborations.</p>
+    <div class="hero__cta">
+      <a href="#about" class="btn btn--gold">Discover More</a>
+      <a href="#events" class="btn btn--outline-white">View Events</a>
+    </div>
+  </div>
+  <div class="hero__stats">
+    <div class="hero__stats-inner">
+      <div class="hero__stat"><div class="hero__stat-num" id="stat-members">50+</div><div class="hero__stat-label">Active Members</div></div>
+      <div class="hero__stat"><div class="hero__stat-num" id="stat-events">25+</div><div class="hero__stat-label">Events Hosted</div></div>
+      <div class="hero__stat"><div class="hero__stat-num" id="stat-lectures">16+</div><div class="hero__stat-label">Guest Lectures</div></div>
+      <div class="hero__stat"><div class="hero__stat-num" id="stat-years">2+</div><div class="hero__stat-label">Years of Impact</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Inspire Forensics</span><span>NFSU Delhi</span><span>Forensic Science</span><span>Guest Lectures</span><span>Crime Scene Investigation</span><span>Fingerprint Analysis</span><span>Forensic Toxicology</span><span>Forensic Anthropology</span><span>Digital Forensics</span><span>NFAT 2025</span><span>CUET UG 2026</span><span>Monthly Newsletter</span>
+    <span>Inspire Forensics</span><span>NFSU Delhi</span><span>Forensic Science</span><span>Guest Lectures</span><span>Crime Scene Investigation</span><span>Fingerprint Analysis</span><span>Forensic Toxicology</span><span>Forensic Anthropology</span><span>Digital Forensics</span><span>NFAT 2025</span><span>CUET UG 2026</span><span>Monthly Newsletter</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label" data-anim="fade">Who We Are</div>
+      <h2 class="section-title" data-anim>Forensics Beyond<br>the Classroom</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__text" data-anim="left">
+        <p>Inspire Forensics is the premier forensic science society at the National Forensic Sciences University, Delhi Campus. Founded in 2024, we are a pan-India community of passionate students dedicated to advancing forensic knowledge through practical application.</p>
+        <p>Our members span universities across India, from NFSU Delhi and Amity University to Galgotias, VGU Jaipur, Chandigarh University, and more, united by a shared passion for forensic science and justice.</p>
+        <p>From fingerprint analysis and crime scene investigation to toxicology, digital forensics, and forensic anthropology, our members engage across a wide spectrum of disciplines guided by expert faculty and industry professionals.</p>
+        <p>We have hosted 16+ expert guest lectures, 3+ inter-university collaborations, monthly newsletter publications (Traces and Trends), and comprehensive sample paper drives for NFAT and CUET aspirants across India.</p>
+        <div class="about__mission">
+          <p>"Our mission is to inspire the next generation of forensic scientists by creating opportunities that go beyond textbooks, through real investigations, expert guidance, and a community built on curiosity and justice."</p>
+        </div>
+      </div>
+      <div class="about__visual" data-anim="right">
+        <div class="about__img-wrap">
+          <img class="about__img-main" src="images/gallery/activity_09.jpg" alt="Forensic Anthropology Lab" loading="lazy">
+          <img class="about__img-accent" src="images/gallery/activity_12.jpg" alt="Crime Scene Kit" loading="lazy">
+          <div class="about__badge">Inspired<br>by Science<br>Driven by<br>Justice</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section class="departments" id="departments">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label label--gold" data-anim="fade">What We Do</div>
+      <h2 class="section-title section-title--white" data-anim>Forensic Disciplines<br>and Departments</h2>
+      <p class="section-desc section-desc--white" data-anim>Our society covers a broad range of forensic disciplines with dedicated departments driving education, research, events, recruitment, and outreach across India.</p>
+    </div>
+    <div class="departments__grid">
+      <div class="dept-card" data-anim data-delay="1"><div class="dept-card__icon">&#128269;</div><div class="dept-card__title">Crime Scene Investigation</div><p class="dept-card__desc">Simulated crime scenes using the NFSU General Investigation Kit, evidence documentation, systematic photography, and reconstruction techniques.</p><span class="dept-card__tag">Practical Training</span></div>
+      <div class="dept-card" data-anim data-delay="2"><div class="dept-card__icon">&#9888;</div><div class="dept-card__title">Forensic Chemistry and Toxicology</div><p class="dept-card__desc">HPLC method development, Trans-Resveratrol analysis in wine samples, chemical reagent testing, soil analysis, and biological sample examination.</p><span class="dept-card__tag">Lab Sciences</span></div>
+      <div class="dept-card" data-anim data-delay="3"><div class="dept-card__icon">&#128400;</div><div class="dept-card__title">Fingerprint Analysis</div><p class="dept-card__desc">Latent fingerprint development using graphite powder dusting at light, medium, and high pressure levels with ridge detail comparison and classification.</p><span class="dept-card__tag">Criminalistics</span></div>
+      <div class="dept-card" data-anim data-delay="4"><div class="dept-card__icon">&#128128;</div><div class="dept-card__title">Forensic Anthropology</div><p class="dept-card__desc">Skeletal morphology analysis, bone classification, sex and age determination from human remains using osteological techniques in a dedicated lab.</p><span class="dept-card__tag">Physical Forensics</span></div>
+      <div class="dept-card" data-anim data-delay="5"><div class="dept-card__icon">&#129516;</div><div class="dept-card__title">Forensic Biology</div><p class="dept-card__desc">Blood pattern analysis, urine sample testing and documentation, DNA and crime investigations, and biological evidence collection protocols.</p><span class="dept-card__tag">Biological Sciences</span></div>
+      <div class="dept-card" data-anim data-delay="6"><div class="dept-card__icon">&#128187;</div><div class="dept-card__title">Digital Forensics</div><p class="dept-card__desc">Cyber intelligence, mobile forensics, digital evidence recovery, and investigations involving computer systems and electronic media.</p><span class="dept-card__tag">Cyber and Digital</span></div>
+      <div class="dept-card" data-anim data-delay="1"><div class="dept-card__icon">&#128218;</div><div class="dept-card__title">Education Department</div><p class="dept-card__desc">NFAT and CUET sample papers, career counselling for forensic aspirants, workshops at schools and universities, and student guidance initiatives.</p><span class="dept-card__tag">Outreach and Education</span></div>
+      <div class="dept-card" data-anim data-delay="2"><div class="dept-card__icon">&#128240;</div><div class="dept-card__title">Research and Development</div><p class="dept-card__desc">Monthly newsletter publication (Traces and Trends), forensic case studies, research presentations, and the Ek Crime Aisa Bhi cold case event series.</p><span class="dept-card__tag">Research and Media</span></div>
+      <div class="dept-card" data-anim data-delay="3"><div class="dept-card__icon">&#128227;</div><div class="dept-card__title">PR and Social Media</div><p class="dept-card__desc">Brand identity management, digital content creation, Instagram presence, event promotions, and public communications for all Inspire Forensics initiatives.</p><span class="dept-card__tag">Communications</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUEST LECTURES -->
+<section class="lectures" id="lectures">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label" data-anim="fade">Expert Insights</div>
+      <h2 class="section-title" data-anim>Guest Lectures</h2>
+      <p class="section-desc" data-anim>Over 16 expert-led sessions covering the full spectrum of forensic disciplines, from questioned documents and forensic nursing to explosives, WWII forensics, and nanotechnology.</p>
+    </div>
+    <div class="lectures__grid" id="lecturesGrid"></div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label" data-anim="fade">Calendar</div>
+      <h2 class="section-title" data-anim>Events and Workshops</h2>
+      <p class="section-desc" data-anim>From inter-university collaborations to hands-on workshops and competitive events, Inspire Forensics creates meaningful forensic experiences throughout the year.</p>
+    </div>
+    <div class="event-posters" id="eventPosters"></div>
+    <div style="margin-top:3rem">
+      <div class="label" style="margin-bottom:1.5rem" data-anim="fade">All Events</div>
+      <div class="events__list" id="eventsList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label label--gold" data-anim="fade">Visual Archive</div>
+      <h2 class="section-title section-title--white" data-anim>In the Field and Lab</h2>
+      <p class="section-desc section-desc--white" data-anim>A glimpse into the practical work our members undertake, from crime scenes and lab sessions to fingerprint analysis and mock investigations.</p>
+    </div>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label">The People Behind It</div>
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-desc">Click any department to meet the people behind it. A pan-India community of forensic science students united by one goal.</p>
+    </div>
+    <div id="teamDepartments"></div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources" id="resources">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label" data-anim="fade">Study Materials</div>
+      <h2 class="section-title" data-anim>Newsletters and Sample Papers</h2>
+      <p class="section-desc" data-anim>Monthly newsletters, NFAT 2025, CUET UG, and CUET PG sample papers curated by the Inspire Forensics Education Department, freely available to all forensic aspirants.</p>
+    </div>
+    <div class="label" style="margin-top:2.5rem;margin-bottom:1rem" data-anim="fade">Monthly Newsletters</div>
+    <div class="resources__grid" id="newsletterGrid"></div>
+    <div class="label" style="margin-top:3rem;margin-bottom:1rem" data-anim="fade">Sample Papers</div>
+    <div class="resources__grid" id="papersGrid"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="label label--gold">Get in Touch</div>
+      <h2 class="section-title section-title--white">Contact Us</h2>
+    </div>
+    <div class="contact__grid">
+
+      <div class="contact__left">
+        <h3 class="contact__heading">Inspire Forensics Society</h3>
+        <div class="contact__item">
+          <span class="contact__icon">&#128205;</span>
+          <p>National Forensic Sciences University<br>Delhi Campus, New Delhi, India</p>
+        </div>
+        <div class="contact__item">
+          <span class="contact__icon">&#9993;</span>
+          <p><a href="mailto:contact.inspireforensics@gmail.com" style="color:var(--gold);text-decoration:none">contact.inspireforensics@gmail.com</a></p>
+        </div>
+        <div class="contact__item">
+          <span class="contact__icon">&#128247;</span>
+          <p>@inspire_forensics on Instagram</p>
+        </div>
+        <div class="contact__item">
+          <span class="contact__icon">&#128336;</span>
+          <p>Monday &ndash; Friday: 10:00 AM &ndash; 5:00 PM<br>Weekends: By appointment</p>
+        </div>
+        <div class="contact__join">
+          <div class="contact__join-title">Join Inspire Forensics</div>
+          <p>We welcome forensic science students from universities across India. Write to us at <strong style="color:var(--gold)">contact.inspireforensics@gmail.com</strong> or fill the form to join our growing community.</p>
+        </div>
+      </div>
+
+      <form class="contact__form" id="contactForm" action="https://formspree.io/f/xkoejonj" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>University or Institution</label>
+          <input type="text" name="university" placeholder="Your university">
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject" placeholder="How can we help?" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" placeholder="Your message..." required></textarea>
+        </div>
+        <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+          <button type="submit" class="btn btn--gold">Send Message</button>
+          <span class="form-success" id="formSuccess">&#10003; Message sent! We&rsquo;ll be in touch soon.</span>
+          <span id="formError" style="display:none;color:#ff8a80;font-family:'Rajdhani',sans-serif;font-size:0.85rem"></span>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__brand-name">Inspire Forensics</div>
+        <p class="footer__brand-desc">A pan-India forensic science society headquartered at NFSU Delhi Campus. Building the next generation of forensic scientists through education, collaboration, and hands-on practice since 2024.</p>
+        <div class="footer__socials">
+          <a href="https://instagram.com/inspire_forensics" target="_blank" class="footer__social-icon" title="Instagram">&#128247;</a>
+          <a href="mailto:contact.inspireforensics@gmail.com" class="footer__social-icon" title="Email">&#9993;</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#departments">Activities</a></li>
+          <li><a href="#lectures">Lectures</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#resources">Newsletters</a></li>
+          <li><a href="#resources">Sample Papers</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/inspire_forensics" target="_blank">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#" onclick="openAdmin();return false">Admin Panel</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&#169; 2025 Inspire Forensics Society, NFSU Delhi Campus. All rights reserved.</p>
+      <p class="footer__credit">Designed &amp; developed by <a href="https://tamannakhurana.vercel.app" target="_blank" class="footer__credit-link">Tamanna Khurana</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" onclick="closeLightbox()">&#10005;</button>
+  <button class="lightbox__prev" onclick="lbPrev()">&#8249;</button>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="Gallery image">
+  <button class="lightbox__next" onclick="lbNext()">&#8250;</button>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="edit-modal" id="editModal">
+  <div class="edit-modal__inner">
+    <div class="edit-modal__hdr">
+      <span class="edit-modal__title" id="editModalTitle">Edit</span>
+      <button class="edit-modal__x" onclick="closeEditModal()">&#10005;</button>
+    </div>
+    <div id="editModalBody"></div>
+    <div class="edit-modal__actions">
+      <button class="btn-add-record" onclick="saveEditModal()">Save Changes</button>
+      <button class="btn-tog-sm" onclick="closeEditModal()" style="padding:10px 20px">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-header">
+    <div class="admin-header__brand">&#9881; Inspire Forensics | Admin Panel</div>
+    <div style="display:flex;align-items:center;gap:1rem">
+      <span id="adminHeaderUser" style="font-family:'DM Sans',sans-serif;font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.08em;display:none">Logged in as Admin</span>
+      <button class="admin-close" onclick="closeAdmin()">&#10005; Close</button>
+    </div>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="adminLoginScreen">
+    <div class="admin-login-screen">
+      <div class="admin-login">
+        <div class="admin-login__logo">Inspire Forensics</div>
+        <p>Enter the admin password to manage site content.</p>
+        <input type="password" id="adminPassword" placeholder="&#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679;">
+        <button onclick="adminLogin()">Login</button>
+        <div class="admin-login__error" id="adminLoginError">Incorrect password. Please try again.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="admin-main" id="adminMainContent">
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="events" onclick="switchAdminTab('events')">Events</button>
+        <button class="admin-tab" data-tab="lectures" onclick="switchAdminTab('lectures')">Lectures</button>
+        <button class="admin-tab" data-tab="members" onclick="switchAdminTab('members')">Members</button>
+        <button class="admin-tab" data-tab="gallery" onclick="switchAdminTab('gallery')">Gallery</button>
+        <button class="admin-tab" data-tab="resources" onclick="switchAdminTab('resources')">Resources</button>
+        <button class="admin-tab" data-tab="stats" onclick="switchAdminTab('stats')">Stats</button>
+      </div>
+
+      <!-- EVENTS -->
+      <div class="admin-section active" id="admin-events">
+        <h2>Manage Events</h2>
+        <div id="adminEventsList"></div>
+        <div class="admin-add-section">
+          <h3>Add New Event</h3>
+          <div class="admin-form">
+            <div><label>Event Name</label><input id="newEventName" placeholder="e.g. Mock Crime Scene Workshop"></div>
+            <div class="admin-form-row3">
+              <div><label>Day</label><input id="newEventDay" placeholder="15"></div>
+              <div><label>Month</label><input id="newEventMonth" placeholder="JUN"></div>
+              <div><label>Year</label><input id="newEventYear" placeholder="2026"></div>
+            </div>
+            <div><label>Venue</label><input id="newEventVenue" placeholder="NFSU Delhi Campus"></div>
+            <div><label>Description</label><textarea id="newEventDesc" placeholder="Brief description..."></textarea></div>
+            <div><label>Status</label>
+              <select id="newEventStatus"><option value="upcoming">Upcoming</option><option value="past">Past</option></select>
+            </div>
+            <button class="btn-add-record" onclick="addEvent()">+ Add Event</button>
+            <div class="admin-success" id="eventAddSuccess">Event added successfully!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LECTURES -->
+      <div class="admin-section" id="admin-lectures">
+        <h2>Manage Guest Lectures</h2>
+        <p style="color:rgba(255,255,255,.38);font-size:.85rem;margin-bottom:1.5rem;font-family:Rajdhani,sans-serif">Click the &#128247; button on any lecture card below to upload its poster image.</p>
+        <div id="adminLecturesList"></div>
+        <div class="admin-add-section">
+          <h3>Add Guest Lecture</h3>
+          <div class="admin-form">
+            <div><label>Lecture Title</label><input id="newLecTitle" placeholder="e.g. Forensic Entomology"></div>
+            <div><label>Date</label><input id="newLecDate" placeholder="e.g. 15 Jun 2025"></div>
+            <button class="btn-add-record" onclick="addLecture()">+ Add Lecture</button>
+            <div class="admin-success" id="lectureAddSuccess">Lecture added! Use the upload button on the card to add its image.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBERS -->
+      <div class="admin-section" id="admin-members">
+        <h2>Manage All Members</h2>
+        <p style="color:rgba(255,255,255,.38);font-size:.85rem;margin-bottom:1.5rem;font-family:Rajdhani,sans-serif">Members are grouped by department. Use the &#128247; button to upload a photo, Edit to change details, Remove to delete.</p>
+        <div id="adminMembersList"></div>
+        <div class="admin-add-section">
+          <h3>Add New Member</h3>
+          <div class="admin-form">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div><label>Full Name</label><input id="newMemName" placeholder="e.g. Priya Sharma"></div>
+              <div><label>Role / Position</label><input id="newMemRole" placeholder="e.g. Core Member, Education"></div>
+            </div>
+            <div>
+              <label>Department</label>
+              <select id="newMemDept">
+                <option value="leadership">Leadership</option>
+                <option value="pr">PR &amp; Social Media</option>
+                <option value="research">Research &amp; Development</option>
+                <option value="education">Education</option>
+                <option value="recruitment">Recruitment</option>
+                <option value="executive">Executive &amp; Guidance</option>
+                <option value="events">Events</option>
+              </select>
+            </div>
+            <div><label>Course / Degree</label><input id="newMemCourse" placeholder="e.g. BSc Forensic Science (2024-27)"></div>
+            <div><label>University</label><input id="newMemUniv" placeholder="University name"></div>
+            <div><label>Bio (short description)</label><textarea id="newMemBio" placeholder="Brief description about the member..." style="min-height:70px"></textarea></div>
+            <div><label>Appointed Date</label><input id="newMemAppointed" placeholder="e.g. Jan 2025"></div>
+            <button class="btn-add-record" onclick="addMemberAdmin()">+ Add Member</button>
+            <div class="admin-success" id="memberAddSuccess">&#10003; Member added! Use the &#128247; button to upload their photo.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <div class="admin-section" id="admin-gallery">
+        <h2>Manage Gallery</h2>
+        <p style="color:rgba(255,255,255,.38);font-size:.85rem;margin-bottom:1.5rem;font-family:Rajdhani,sans-serif">Add a caption below, then use the &#128247; button on the tile to upload the image directly.</p>
+        <div class="admin-grid-4" id="adminGalleryList"></div>
+        <div class="admin-add-section">
+          <h3>Add Gallery Image</h3>
+          <div class="admin-form">
+            <div><label>Caption</label><input id="newGalleryLabel" placeholder="e.g. Crime Scene Workshop"></div>
+            <button class="btn-add-record" onclick="addGalleryItem()">+ Add Slot</button>
+            <div class="admin-success" id="galleryAddSuccess">Slot added! Use the &#128247; button on the new tile to upload the image.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESOURCES -->
+      <div class="admin-section" id="admin-resources">
+        <h2>Manage Resources</h2>
+        <div id="adminResourcesGrid"></div>
+        <div class="admin-add-section">
+          <h3>Add Resource</h3>
+          <div class="admin-form">
+            <div><label>Title</label><input id="newResTitle" placeholder="Newsletter May 2026"></div>
+            <div><label>Type</label>
+              <select id="newResType"><option value="Newsletter">Newsletter</option><option value="Sample Paper">Sample Paper</option><option value="Resource">Other</option></select>
+            </div>
+            <div>
+              <label>Upload PDF</label>
+              <label class="admin-upload-btn" style="display:inline-flex;margin-top:4px">
+                &#128196; Choose PDF File
+                <input type="file" accept=".pdf,application/pdf" style="display:none" onchange="uploadResourcePDF(this)">
+              </label>
+              <div id="pdfPreview" style="margin-top:6px;font-family:Rajdhani,sans-serif;font-size:0.8rem;color:rgba(255,255,255,.45)">No file selected</div>
+            </div>
+            <button class="btn-add-record" onclick="addResource()">+ Add Resource</button>
+            <div class="admin-success" id="resourceAddSuccess">&#10003; Resource added!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="admin-section" id="admin-stats">
+        <h2>Site Statistics</h2>
+        <p style="color:rgba(255,255,255,.38);font-size:.85rem;margin-bottom:2rem">These numbers appear in the hero banner on the homepage.</p>
+        <div class="admin-form" style="max-width:480px">
+          <div class="admin-form-row">
+            <div><label>Active Members</label><input id="statMembers" placeholder="50+"></div>
+            <div><label>Events Hosted</label><input id="statEvents" placeholder="25+"></div>
+          </div>
+          <div class="admin-form-row">
+            <div><label>Guest Lectures</label><input id="statLectures" placeholder="16+"></div>
+            <div><label>Years Active</label><input id="statYears" placeholder="2+"></div>
+          </div>
+          <button class="btn-add-record" onclick="updateStats()">Save Statistics</button>
+          <div class="admin-success" id="statsSuccess">Stats updated on homepage!</div>
+        </div>
+        <div class="admin-add-section" style="margin-top:2rem">
+          <h3>Change Admin Password</h3>
+          <div class="admin-form" style="max-width:440px">
+            <div><label>Current Password</label><input type="password" id="pwCurrent" placeholder="Enter current password"></div>
+            <div><label>New Password</label><input type="password" id="pwNew" placeholder="Min 6 characters"></div>
+            <div><label>Confirm New Password</label><input type="password" id="pwConfirm" placeholder="Repeat new password"></div>
+            <button class="btn-add-record" onclick="changePassword()">Change Password</button>
+            <div class="admin-success" id="pwOk">&#10003; Password changed for this session!</div>
+            <div style="display:none;color:#ff6b6b;background:rgba(211,47,47,.12);border:1px solid rgba(211,47,47,.25);padding:9px 14px;margin-top:.8rem;font-family:Rajdhani,sans-serif;font-size:.85rem" id="pwError"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/supabase.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
