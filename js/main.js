@@ -539,6 +539,17 @@ function closeAdmin() {
   document.body.style.overflow = '';
   renderGallery();
 }
+/* =============================================
+   PASSWORD VISIBILITY TOGGLE
+   ============================================= */
+function togglePw(inputId, btn) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  const isHidden = input.type === 'password';
+  input.type = isHidden ? 'text' : 'password';
+  btn.style.opacity = isHidden ? '1' : '0.4';
+}
+
 function adminLogin() {
   const pw = document.getElementById('adminPassword').value;
   if (pw === ADMIN_PASSWORD) {

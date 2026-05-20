@@ -375,7 +375,10 @@
       <div class="admin-login">
         <div class="admin-login__logo">Inspire Forensics</div>
         <p>Enter the admin password to manage site content.</p>
-        <input type="password" id="adminPassword" placeholder="&#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679; &#9679;">
+        <div class="pw-wrap">
+          <input type="password" id="adminPassword" placeholder="Enter password">
+          <button type="button" class="pw-eye" onclick="togglePw('adminPassword',this)" tabindex="-1">&#128065;</button>
+        </div>
         <button onclick="adminLogin()">Login</button>
         <div class="admin-login__error" id="adminLoginError">Incorrect password. Please try again.</div>
       </div>
@@ -527,9 +530,24 @@
         <div class="admin-add-section" style="margin-top:2rem">
           <h3>Change Admin Password</h3>
           <div class="admin-form" style="max-width:440px">
-            <div><label>Current Password</label><input type="password" id="pwCurrent" placeholder="Enter current password"></div>
-            <div><label>New Password</label><input type="password" id="pwNew" placeholder="Min 6 characters"></div>
-            <div><label>Confirm New Password</label><input type="password" id="pwConfirm" placeholder="Repeat new password"></div>
+            <div><label>Current Password</label>
+              <div class="pw-wrap">
+                <input type="password" id="pwCurrent" placeholder="Enter current password">
+                <button type="button" class="pw-eye" onclick="togglePw('pwCurrent',this)" tabindex="-1">&#128065;</button>
+              </div>
+            </div>
+            <div><label>New Password</label>
+              <div class="pw-wrap">
+                <input type="password" id="pwNew" placeholder="Min 6 characters">
+                <button type="button" class="pw-eye" onclick="togglePw('pwNew',this)" tabindex="-1">&#128065;</button>
+              </div>
+            </div>
+            <div><label>Confirm New Password</label>
+              <div class="pw-wrap">
+                <input type="password" id="pwConfirm" placeholder="Repeat new password">
+                <button type="button" class="pw-eye" onclick="togglePw('pwConfirm',this)" tabindex="-1">&#128065;</button>
+              </div>
+            </div>
             <button class="btn-add-record" onclick="changePassword()">Change Password</button>
             <div class="admin-success" id="pwOk">&#10003; Password changed for this session!</div>
             <div style="display:none;color:#ff6b6b;background:rgba(211,47,47,.12);border:1px solid rgba(211,47,47,.25);padding:9px 14px;margin-top:.8rem;font-family:Rajdhani,sans-serif;font-size:.85rem" id="pwError"></div>
