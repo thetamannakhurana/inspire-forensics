@@ -1053,21 +1053,35 @@ function changePassword() {
    ANNOUNCEMENT POPUP
    ============================================= */
 function initAnnouncePopup() {
+  // Clear ALL old dismiss keys so popup always shows
+  sessionStorage.removeItem('announce_dismissed');
+  Object.keys(localStorage).filter(k => k.startsWith('announce_')).forEach(k => localStorage.removeItem(k));
+
   const upcoming = SiteData.events.find(e => e.status === 'upcoming');
-  if (!upcoming) return;
-  // Show once per session
-  if (sessionStorage.getItem('announce_dismissed')) return;
-  document.getElementById('announceTitle').textContent = upcoming.name;
-  document.getElementById('announceDate').textContent  = upcoming.day + ' ' + upcoming.month + ' ' + upcoming.year + ' • ' + upcoming.venue;
-  document.getElementById('announceDesc').textContent  = upcoming.desc;
-  // Show after 1.5s delay
+  if (!upcoming) { console.log('Popup: no upcoming event found'); return; }
+
+  const overlay = document.getElementById('announceOverlay');
+  if (!overlay) { console.log('Popup: overlay element not found'); return; }
+
+  // desc comes from JS data, description comes from Supabase column name
+  const desc = upcoming.desc || upcoming.description || '';
+  const day   = (upcoming.day && upcoming.day !== 'TBD') ? upcoming.day + ' ' : '';
+  const date  = day + (upcoming.month || '') + ' ' + (upcoming.year || '');
+  const venue = upcoming.venue ? ' • ' + upcoming.venue : '';
+
+  document.getElementById('announceTitle').textContent = upcoming.name || 'Upcoming Event';
+  document.getElementById('announceDate').textContent  = date + venue;
+  document.getElementById('announceDesc').textContent  = desc;
+
+  console.log('Popup: showing event:', upcoming.name);
+
   setTimeout(() => {
-    document.getElementById('announceOverlay').classList.add('open');
-  }, 1500);
+    overlay.classList.add('open');
+  }, 1800);
 }
 function closeAnnounce() {
-  document.getElementById('announceOverlay').classList.remove('open');
-  sessionStorage.setItem('announce_dismissed', '1');
+  const overlay = document.getElementById('announceOverlay');
+  if (overlay) overlay.classList.remove('open');
 }
 
 /* =============================================
