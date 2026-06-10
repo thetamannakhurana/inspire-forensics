@@ -17,7 +17,7 @@ const SiteData = {
   events: [
     { id:1, name:"Frame by Forensics", day:"18", month:"MAY", year:"2025",
       desc:"A photography and creative expression event celebrating forensic science through the lens. Members showcased their understanding of forensic concepts through curated photographs and visual storytelling.",
-      venue:"NFSU Delhi Campus", status:"past",
+      venue:"An Educational Firm", status:"past",
       poster:"images/events/18th May 2025_Frame by Forensics.jpg" },
     { id:2, name:"VGU x Inspire Forensics Collaboration", day:"07", month:"NOV", year:"2025",
       desc:"A 3-day collaborative workshop with Vivekananda Global University, Jaipur covering trace evidence analysis, crime scene documentation, and practical forensic techniques.",
@@ -29,7 +29,7 @@ const SiteData = {
       poster:"images/events/9th March 2026_Inspire X Amity.jpg" },
     { id:4, name:"Ek Crime Aisa Bhi 2.0 (ECAB 2.0)", day:"TBD", month:"JUN", year:"2026",
       desc:"The highly anticipated cold case reconstruction event. Participants will analyse real-world case studies, reconstruct crime timelines, and present their findings before a panel of experts simulating a courtroom experience.",
-      venue:"Online / NFSU Delhi", status:"upcoming", poster:"" },
+      venue:"Online / An Educational Firm", status:"upcoming", poster:"" },
     { id:5, name:"NFAT 2025 Sample Paper Drive", day:"15", month:"AUG", year:"2025",
       desc:"Curated and distributed official NFAT 2025 and CUET UG/PG 2026 sample papers to forensic aspirants across India, supporting over 500 students in their entrance exam preparation.",
       venue:"Online", status:"past", poster:"" }
@@ -68,13 +68,13 @@ const SiteData = {
   /* single flat array — dept field maps to department id above */
   allMembers: [
     /* LEADERSHIP */
-    { id:1,   name:"Abhinab Tripura",     role:"President",                          dept:"leadership", univ:"NFSU Delhi Campus",                                        photo:"images/members/Abhinab Tripura.JPG",   appointed:"2024",   course:"Forensic Science",         bio:"President of Inspire Forensics Society. Leading the vision of building India's most active forensic science student community.", linkedin:"", instagram:"" },
-    { id:10,  name:"Ayushka Sinha",       role:"Vice President",                     dept:"leadership", univ:"NFSU Delhi Campus",                                        photo:"",                                     appointed:"2024",   course:"Forensic Science",         bio:"Vice President of Inspire Forensics, driving initiatives across departments and supporting the society's growth.", linkedin:"", instagram:"" },
+    { id:1,   name:"Abhinab Tripura",     role:"President",                          dept:"leadership", univ:"An Educational Firm",                                        photo:"images/members/Abhinab Tripura.JPG",   appointed:"2024",   course:"Forensic Science",         bio:"President of Inspire Forensics Society. Leading the vision of building India's most active forensic science student community.", linkedin:"", instagram:"" },
+    { id:10,  name:"Ayushka Sinha",       role:"Vice President",                     dept:"leadership", univ:"An Educational Firm",                                        photo:"",                                     appointed:"2024",   course:"Forensic Science",         bio:"Vice President of Inspire Forensics, driving initiatives across departments and supporting the society's growth.", linkedin:"", instagram:"" },
 
     /* PR & SOCIAL MEDIA */
     { id:4,   name:"Manpreet Kaur",       role:"Head of PR & Social Media",          dept:"pr",         univ:"NIMS University, Rajasthan",                               photo:"images/members/Manpreet.jpeg",         appointed:"12 Mar 2025", course:"BSc (Hons) Forensic Science", bio:"Leads all PR and social media operations for Inspire Forensics, building the society's online presence and brand identity.", linkedin:"", instagram:"" },
     { id:7,   name:"Medha Manoj Nair",    role:"Coordinator of PR & Social Media",   dept:"pr",         univ:"Kristu Jayanti University, Bengaluru",                     photo:"images/members/Medha.jpg",             appointed:"19 Dec 2024", course:"BSc Forensic Science (2024-27)", bio:"Coordinates social media content and digital outreach for Inspire Forensics across all platforms.", linkedin:"", instagram:"" },
-    { id:9,   name:"Ritika Sinha",        role:"Core Member, PR & Social Media",     dept:"pr",         univ:"NFSU Delhi Campus",                                        photo:"images/members/Ritika Sinha.jpg",      appointed:"2024",   course:"Forensic Science",         bio:"Founding member and core part of the PR team. Instrumental in establishing Inspire Forensics from the ground up.", linkedin:"", instagram:"" },
+    { id:9,   name:"Ritika Sinha",        role:"Core Member, PR & Social Media",     dept:"pr",         univ:"An Educational Firm",                                        photo:"images/members/Ritika Sinha.jpg",      appointed:"2024",   course:"Forensic Science",         bio:"Founding member and core part of the PR team. Instrumental in establishing Inspire Forensics from the ground up.", linkedin:"", instagram:"" },
     { id:101, name:"Komal Sontake",       role:"Core Member, PR & Social Media",     dept:"pr",         univ:"Samrat Vikramaditya Vishwavidyalay, Ujjain",               photo:"images/members/komal Sontake.jpg",     appointed:"22 Apr 2025", course:"BSc (Hons) Forensic Science",  bio:"Core member of the PR department, contributing to content creation and social media strategy.", linkedin:"", instagram:"" },
 
     /* RESEARCH & DEVELOPMENT */
@@ -82,24 +82,28 @@ const SiteData = {
     { id:105, name:"Poornima Jindal",     role:"Core Member, Research & Development",dept:"research",   univ:"Govt Holkar Science Autonomous College, Indore",           photo:"",                                     appointed:"Dec 2025",  course:"MSc Forensic Sciences",          bio:"Research and development team member contributing to forensic case studies and academic content.", linkedin:"", instagram:"" },
 
     /* EDUCATION */
-    { id:5,   name:"Piyush Pandey",       role:"Coordinator, Education Department",  dept:"education",  univ:"NFSU Delhi Campus",                                        photo:"images/members/Piyush Pandey.jpg",     appointed:"6 Feb 2025", course:"BSc-MSc Forensic Science (2024-29)", bio:"Coordinates the education department, curating NFAT and CUET sample papers and organizing career guidance sessions for forensic aspirants.", linkedin:"", instagram:"" },
-    { id:102, name:"Mannat Kaur",         role:"Core Member, Education",             dept:"education",  univ:"Amity University Haryana",                                  photo:"images/members/Mannat Kaur.jpeg",      appointed:"9 May 2025", course:"BSc Forensic Science (2023-26)",   bio:"Education team member focused on sample paper curation and student outreach initiatives.", linkedin:"", instagram:"" },
-    { id:103, name:"Pragna Ravish",       role:"Core Member, Education",             dept:"education",  univ:"Soundarya Institute of Management and Science, Bangalore",  photo:"images/members/Pragna Ravish.jpg",     appointed:"20 Apr 2025", course:"BSc Forensic Science (2024-27)",   bio:"Education team member supporting workshop coordination and study material development for forensic aspirants.", linkedin:"", instagram:"" },
-    { id:104, name:"Sana'a Abdulhamid",   role:"Core Member, Education",             dept:"education",  univ:"Garden City University",                                   photo:"images/members/Sana_a Abdulhamid.jpg", appointed:"9 May 2025", course:"MSc Forensic Science (2025-27)",    bio:"Education team core member working on curriculum guidance and aspirant support programs.", linkedin:"", instagram:"" },
-    { id:109, name:"Tamonash Bhattacharjya",role:"Member, Education",               dept:"education",  univ:"Jharkhand Raksha Shakti University",                        photo:"images/members/Tamonash.jpg",          appointed:"2025",   course:"BSc (Hons) Forensic Science",    bio:"Active member of the education department contributing to outreach and academic support.", linkedin:"", instagram:"" },
+    { id:5,   name:"Piyush Pandey",       role:"Coordinator, Education Department",  sortOrder:2, dept:"education",  univ:"An Educational Firm",                                        photo:"images/members/Piyush Pandey.jpg",     appointed:"6 Feb 2025", course:"BSc-MSc Forensic Science (2024-29)", bio:"Coordinates the education department, curating NFAT and CUET sample papers and organizing career guidance sessions for forensic aspirants.", linkedin:"", instagram:"" },
+    { id:102, name:"Mannat Kaur",         role:"Core Member, Education",             sortOrder:3, dept:"education",  univ:"Amity University Haryana",                                  photo:"images/members/Mannat Kaur.jpeg",      appointed:"9 May 2025", course:"BSc Forensic Science (2023-26)",   bio:"Education team member focused on sample paper curation and student outreach initiatives.", linkedin:"", instagram:"" },
+    { id:103, name:"Pragna Ravish",       role:"Core Member, Education",             sortOrder:4, dept:"education",  univ:"Soundarya Institute of Management and Science, Bangalore",  photo:"images/members/Pragna Ravish.jpg",     appointed:"20 Apr 2025", course:"BSc Forensic Science (2024-27)",   bio:"Education team member supporting workshop coordination and study material development for forensic aspirants.", linkedin:"", instagram:"" },
+    { id:104, name:"Sana'a Abdulhamid",   role:"Core Member, Education",             sortOrder:5, dept:"education",  univ:"Garden City University",                                   photo:"images/members/Sana_a Abdulhamid.jpg", appointed:"9 May 2025", course:"MSc Forensic Science (2025-27)",    bio:"Education team core member working on curriculum guidance and aspirant support programs.", linkedin:"", instagram:"" },
+    { id:109, name:"Tamonash Bhattacharjya",role:"Head of Executive & Guidance", sortOrder:1,     dept:"executive",  univ:"Jharkhand Raksha Shakti University",                        photo:"images/members/Tamonash.jpg",          appointed:"2025",   course:"BSc (Hons) Forensic Science",    bio:"Head of the Executive & Guidance department, leading mentorship and operational initiatives across Inspire Forensics.", linkedin:"", instagram:"" },
 
     /* RECRUITMENT */
     { id:2,   name:"Srija Chakraborty",   role:"Head of Recruitment & Treasurer",    dept:"recruitment",univ:"Vivekananda Global University, Jaipur",                    photo:"images/members/Srija.jpg",             appointed:"19 Dec 2024", course:"BSc (Hons) Forensic Science (2023-26)", bio:"Heads recruitment and manages the society's treasury. Key in expanding Inspire Forensics to universities across India.", linkedin:"", instagram:"" },
     { id:8,   name:"Anushka Chakraborty", role:"Coordinator, Recruitment",           dept:"recruitment",univ:"Vivekananda Global University, Jaipur",                    photo:"images/members/anushka chakraborty (coordinator of recruitment).jpg", appointed:"17 Jan 2026", course:"BSc Forensic Science (2025-28)", bio:"Recruitment coordinator helping identify and onboard passionate forensic science students from across India.", linkedin:"", instagram:"" },
 
     /* EXECUTIVE & GUIDANCE */
-    { id:6,   name:"Trisha Khurana",      role:"Coordinator, Executive & Guidance",  dept:"executive",  univ:"NFSU Delhi",                                               photo:"images/members/trisha khurana_.jpg",   appointed:"Feb 2025",  course:"BSc-MSc Forensic Science",        bio:"Executive coordinator providing guidance and mentorship to members, ensuring smooth operations across all departments.", linkedin:"", instagram:"" },
-    { id:107, name:"Sidhi Jain",          role:"Core Member, Executive & Guidance",  dept:"executive",  univ:"Chandigarh University",                                    photo:"images/members/Sidhi Jain.jpg",        appointed:"6 Jan 2026", course:"BSc Forensic Science (2023-26)",   bio:"Executive team member contributing to guidance initiatives and inter-department coordination.", linkedin:"", instagram:"" },
-    { id:108, name:"Tanmay Tyagi",        role:"Core Member, Executive & Guidance",  dept:"executive",  univ:"Amity University Gurugram",                                photo:"images/members/Tanmay.jpg",            appointed:"6 Jan 2026", course:"BSc Forensic Science (2025-29)",   bio:"Executive and guidance team member supporting mentorship programs and operational activities.", linkedin:"", instagram:"" },
+    { id:6,   name:"Trisha Khurana",      role:"Coordinator, Executive & Guidance",  sortOrder:2, dept:"executive",  univ:"An Educational Firm",                                               photo:"images/members/trisha khurana_.jpg",   appointed:"Feb 2025",  course:"BSc-MSc Forensic Science",        bio:"Executive coordinator providing guidance and mentorship to members, ensuring smooth operations across all departments.", linkedin:"", instagram:"" },
+    { id:107, name:"Sidhi Jain",          role:"Core Member, Executive & Guidance",  sortOrder:3, dept:"executive",  univ:"Chandigarh University",                                    photo:"images/members/Sidhi Jain.jpg",        appointed:"6 Jan 2026", course:"BSc Forensic Science (2023-26)",   bio:"Executive team member contributing to guidance initiatives and inter-department coordination.", linkedin:"", instagram:"" },
+    { id:108, name:"Tanmay Tyagi",        role:"Core Member, Executive & Guidance",  sortOrder:4, dept:"executive",  univ:"Amity University Gurugram",                                photo:"images/members/Tanmay.jpg",            appointed:"6 Jan 2026", course:"BSc Forensic Science (2025-29)",   bio:"Executive and guidance team member supporting mentorship programs and operational activities.", linkedin:"", instagram:"" },
 
     /* EVENTS */
     { id:106, name:"Siya Anwekar",        role:"Core Member, Event Team",            dept:"events",     univ:"RV University, Bangalore",                                 photo:"images/members/Siya Anwekar.jpeg",     appointed:"16 Oct 2025", course:"BSc (Hons) Criminology, Cyber Law & Forensic Science (2024-28)", bio:"Events team core member involved in planning and executing Inspire Forensics workshops and collaborative events.", linkedin:"", instagram:"" },
-    { id:110, name:"Jennica Fernandes",   role:"Member, Events",                     dept:"events",     univ:"",                                                         photo:"images/members/Jennica Fernandes.JPG", appointed:"2025",   course:"Forensic Science",               bio:"Events team member contributing to event coordination and community engagement activities.", linkedin:"", instagram:"" }
+    { id:110, name:"Jennica Fernandes",   role:"Head of Education",                  sortOrder:1, dept:"education",  univ:"",                                                         photo:"images/members/Jennica Fernandes.JPG", appointed:"2025",   course:"Forensic Science",               bio:"Head of the Education department at Inspire Forensics, leading curriculum guidance and aspirant support programs.", linkedin:"", instagram:"" },
+    /* NEW MEMBERS */
+    { id:201, name:"Aman Sharma",         role:"Core Member, Research & Development", dept:"research",   univ:"",                                                         photo:"",                                     appointed:"2025",   course:"Forensic Science",               bio:"Core member of the Research & Development department, contributing to forensic case studies and academic content.", linkedin:"", instagram:"" },
+    { id:202, name:"Siddhi Sharma",       role:"Core Member, Research & Development", dept:"research",   univ:"",                                                         photo:"",                                     appointed:"2025",   course:"Forensic Science",               bio:"Core member of the Research & Development department supporting research publications and newsletter content.", linkedin:"", instagram:"" },
+    { id:203, name:"Susmriti Pal",        role:"Core Member, Event Team",             dept:"events",     univ:"",                                                         photo:"",                                     appointed:"2025",   course:"Forensic Science",               bio:"Core member of the Events department, contributing to planning and execution of Inspire Forensics events.", linkedin:"", instagram:"" },
   ],
 
   gallery: [
@@ -284,7 +288,7 @@ function renderTeam() {
   if (!container) return;
 
   container.innerHTML = SiteData.departments.map(dept => {
-    const members = SiteData.allMembers.filter(m => m.dept === dept.id);
+    const members = SiteData.allMembers.filter(m => m.dept === dept.id).sort((a,b) => (a.sortOrder||99)-(b.sortOrder||99));
     if (!members.length) return '';
     return `
     <div class="dept-block" data-dept="${dept.id}">
@@ -1044,6 +1048,28 @@ function changePassword() {
 }
 
 
+
+/* =============================================
+   ANNOUNCEMENT POPUP
+   ============================================= */
+function initAnnouncePopup() {
+  const upcoming = SiteData.events.find(e => e.status === 'upcoming');
+  if (!upcoming) return;
+  // Show once per session
+  if (sessionStorage.getItem('announce_dismissed')) return;
+  document.getElementById('announceTitle').textContent = upcoming.name;
+  document.getElementById('announceDate').textContent  = upcoming.day + ' ' + upcoming.month + ' ' + upcoming.year + ' • ' + upcoming.venue;
+  document.getElementById('announceDesc').textContent  = upcoming.desc;
+  // Show after 1.5s delay
+  setTimeout(() => {
+    document.getElementById('announceOverlay').classList.add('open');
+  }, 1500);
+}
+function closeAnnounce() {
+  document.getElementById('announceOverlay').classList.remove('open');
+  sessionStorage.setItem('announce_dismissed', '1');
+}
+
 /* =============================================
    EDIT MODAL
    ============================================= */
@@ -1075,6 +1101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderTeam();
   renderGallery();
   renderResources();
+  initAnnouncePopup();
 
   document.addEventListener('keydown', e => {
     if (document.getElementById('lightbox').classList.contains('open')) {
