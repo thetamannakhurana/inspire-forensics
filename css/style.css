@@ -777,7 +777,6 @@ section { padding: 5.5rem 2rem; }
   color: rgba(255,255,255,0.55); transition: color 0.2s;
 }
 .footer__legal a:hover { color: var(--gold); }
-
 /* =============================================
    ADMIN PANEL
    ============================================= */
@@ -1110,7 +1109,6 @@ section { padding: 5.5rem 2rem; }
 /* Admin main content */
 .admin-main { display: none; }
 .admin-main.visible { display: block; }
-
 /* =============================================
    MEMBER PROFILE CARDS  (expanded team view)
    ============================================= */
@@ -1279,7 +1277,6 @@ section { padding: 5.5rem 2rem; }
    ============================================= */
 
 .gallery__item { position: relative; }
-
 .gallery__admin-controls {
   position: absolute; top: 8px; right: 8px;
   display: flex; gap: 6px; z-index: 10;
@@ -1550,6 +1547,7 @@ section { padding: 5.5rem 2rem; }
   100% { transform: translateX(-50%); }
 }
 .admin-login .pw-wrap { margin-bottom: 1rem; }
+<<<<<<< HEAD
 /* =============================================
    FOOTER REGISTRATION BADGES
    ============================================= */
@@ -1625,3 +1623,5 @@ section { padding: 5.5rem 2rem; }
   .announce-modal { padding: 2rem 1.4rem 1.5rem; }
   .announce-title { font-size: 1.15rem; }
 }
+=======
+>>>>>>> 2ad8e6ee3d59706bcc2d838ae53bf7a0d19015e2
