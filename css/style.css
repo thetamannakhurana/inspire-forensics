@@ -21,9 +21,9 @@
   --gold-dark:  #b8951f;
   --red:        #D32F2F;
   --red-dark:   #b71c1c;
-  --navy:       #0f2d5e;
-  --navy-light: #1e4480;
-  --navy-deep:  #0c1a30;
+  --navy:       #1e3d78;
+  --navy-light: #2a5298;
+  --navy-deep:  #1a2f55;
   --black:      #000000;
   --white:      #ffffff;
   --beige:      #F3C678;
@@ -107,12 +107,12 @@ section { padding: 5.5rem 2rem; }
    ============================================= */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(7,17,31,0.96);
+  background: rgba(18,40,80,0.96);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(212,175,55,0.22);
   transition: all 0.3s;
 }
-.navbar.scrolled { background: rgba(7,17,31,0.99); }
+.navbar.scrolled { background: rgba(18,40,80,0.99); }
 
 .navbar__inner {
   max-width: 1240px; margin: 0 auto;
@@ -122,7 +122,7 @@ section { padding: 5.5rem 2rem; }
 .navbar__logo {
   display: flex; align-items: center; gap: 12px; text-decoration: none;
 }
-.navbar__logo-icon { width: 42px; height: 42px; flex-shrink: 0; }
+.navbar__logo-icon, .navbar__logo-svg { width: 44px; height: 44px; flex-shrink: 0; object-fit: contain; }
 .navbar__logo-text {
   font-family: 'Cinzel', serif; font-size: 1rem;
   font-weight: 700; color: var(--gold); letter-spacing: 0.06em; line-height: 1.2;
@@ -187,7 +187,7 @@ section { padding: 5.5rem 2rem; }
 }
 .hero__bg, .hero__glow {
   position: absolute; inset: 0;
-  background: linear-gradient(140deg, #0c1a30 0%, #0f2d5e 45%, #162060 100%);
+  background: linear-gradient(140deg, #1a2f55 0%, #1e3d78 45%, #243580 100%);
 }
 .hero__grid {
   position: absolute; inset: 0;
@@ -333,7 +333,7 @@ section { padding: 5.5rem 2rem; }
 /* =============================================
    DEPARTMENTS / ACTIVITIES
    ============================================= */
-.departments { background: #122966; }
+.departments { background: #1a3570; }
 .departments__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 1.5rem; margin-top: 3rem;
@@ -472,7 +472,7 @@ section { padding: 5.5rem 2rem; }
 /* =============================================
    GALLERY
    ============================================= */
-.gallery { background: #0f2d5e; }
+.gallery { background: #1a3570; }
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -690,7 +690,7 @@ section { padding: 5.5rem 2rem; }
 /* =============================================
    CONTACT
    ============================================= */
-.contact { background: #0e1f3d; }
+.contact { background: #1a3060; }
 .contact__grid {
   display: grid; grid-template-columns: 1fr 1.2fr;
   gap: 4rem; margin-top: 3rem; align-items: start;
@@ -738,7 +738,7 @@ section { padding: 5.5rem 2rem; }
    FOOTER
    ============================================= */
 .footer {
-  background: #081526;
+  background: #0f2040;
   border-top: 1px solid rgba(212,175,55,0.14);
   padding: 3.5rem 2rem 2rem;
 }
@@ -777,17 +777,18 @@ section { padding: 5.5rem 2rem; }
   color: rgba(255,255,255,0.55); transition: color 0.2s;
 }
 .footer__legal a:hover { color: var(--gold); }
+
 /* =============================================
    ADMIN PANEL
    ============================================= */
 .admin-overlay {
   display: none; position: fixed; inset: 0; z-index: 9000;
-  background: rgba(4,11,20,0.98); overflow-y: auto;
+  background: rgba(15,32,64,0.98); overflow-y: auto;
 }
 .admin-overlay.open { display: block; }
 .admin-header {
   position: sticky; top: 0; z-index: 10;
-  background: #0a1628; border-bottom: 1px solid rgba(212,175,55,0.3);
+  background: #162850; border-bottom: 1px solid rgba(212,175,55,0.3);
   padding: 0 2rem; height: 58px;
   display: flex; align-items: center; justify-content: space-between;
 }
@@ -939,7 +940,7 @@ section { padding: 5.5rem 2rem; }
 }
 .edit-modal.open { display: flex; }
 .edit-modal__inner {
-  background: #0d1f38; border: 1px solid rgba(212,175,55,0.3);
+  background: #162850; border: 1px solid rgba(212,175,55,0.3);
   padding: 2rem; max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto;
 }
 .edit-modal__header {
@@ -1109,6 +1110,7 @@ section { padding: 5.5rem 2rem; }
 /* Admin main content */
 .admin-main { display: none; }
 .admin-main.visible { display: block; }
+
 /* =============================================
    MEMBER PROFILE CARDS  (expanded team view)
    ============================================= */
@@ -1277,6 +1279,7 @@ section { padding: 5.5rem 2rem; }
    ============================================= */
 
 .gallery__item { position: relative; }
+
 .gallery__admin-controls {
   position: absolute; top: 8px; right: 8px;
   display: flex; gap: 6px; z-index: 10;
@@ -1422,7 +1425,7 @@ section { padding: 5.5rem 2rem; }
    FOOTER — gold headings, white text
    ============================================= */
 .footer {
-  background: #081526;
+  background: #0f2040;
   border-top: 1px solid rgba(212,175,55,0.2);
   padding: 3.5rem 2rem 0;
 }
@@ -1547,7 +1550,6 @@ section { padding: 5.5rem 2rem; }
   100% { transform: translateX(-50%); }
 }
 .admin-login .pw-wrap { margin-bottom: 1rem; }
-<<<<<<< HEAD
 /* =============================================
    FOOTER REGISTRATION BADGES
    ============================================= */
@@ -1623,5 +1625,3 @@ section { padding: 5.5rem 2rem; }
   .announce-modal { padding: 2rem 1.4rem 1.5rem; }
   .announce-title { font-size: 1.15rem; }
 }
-=======
->>>>>>> 2ad8e6ee3d59706bcc2d838ae53bf7a0d19015e2
